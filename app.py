@@ -51,7 +51,7 @@ def student_delete(id):
         db.session.commit()
         return redirect('/students')
     except:
-        return "При удалении статьи произошла ошибка"
+        return "При удалении студента произошла ошибка"
 
 
 
@@ -68,7 +68,7 @@ def student_update(id):
             db.session.commit()
             return redirect('/students')
         except:
-            return "При редактировании статьи произошла ошибка"
+            return "При редактировании данных произошла ошибка"
     else:
         return render_template("student_update.html",Student=Student)
 
@@ -88,7 +88,7 @@ def create_student():
             db.session.commit()
             return redirect('/students')
         except:
-            return "При добавлении статьи произошла ошибка"
+            return "При добавлении студента произошла ошибка"
     else:
         return render_template("create-student.html")
 
